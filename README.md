@@ -58,7 +58,7 @@ cd client
 
 2. Install the necessary packages:
 
-npm install
+npm install --legacy-peer-deps 
 
 3. Start the frontend server:
 
