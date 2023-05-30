@@ -15,12 +15,3 @@ export async function getAsteroids(startDate: string, endDate: string) {
 		throw new Error(`Error retrieving asteroids: ${error.message}`);
 	}
 }
-
-export async function getAsteroidById(id: string) {
-	try {
-		const response = await axios.get(`${BASE_URL}/asteroids/${id}`);
-		return response.data;
-	} catch (error: any) {
-		throw new Error(`Error retrieving asteroid: ${error.message}`);
-	}
-}

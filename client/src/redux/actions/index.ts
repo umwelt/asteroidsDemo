@@ -1,8 +1,6 @@
 import Asteroid from "../../models/asteroid";
 import { Dispatch } from "react";
-import { getAsteroids, getAsteroidById } from "../../services/apiService";
-import {RootState} from "../reducers";
-import {useSelector} from "react-redux";
+import { getAsteroids } from "../../services/apiService";
 
 export const FETCH_ASTEROIDS_REQUEST = 'FETCH_ASTEROIDS_REQUEST';
 export const FETCH_ASTEROIDS_SUCCESS = 'FETCH_ASTEROIDS_SUCCESS';
@@ -68,16 +66,6 @@ export const fetchAsteroids = (startDate: string, endDate: string) => async (dis
 	try {
 		const asteroids = await getAsteroids(startDate, endDate);
 		dispatch(fetchAsteroidsSuccess(asteroids));
-	} catch (error: any) {
-		dispatch(fetchAsteroidsFailure(error.message));
-	}
-};
-
-export const fetchAsteroidById = (id: string) => async (dispatch: Dispatch<AsteroidsAction>) => {
-	dispatch(fetchAsteroidsRequest());
-	try {
-		const asteroid = await getAsteroidById(id);
-		dispatch(fetchAsteroidsSuccess([asteroid]));
 	} catch (error: any) {
 		dispatch(fetchAsteroidsFailure(error.message));
 	}
