@@ -1,0 +1,18 @@
+.hazardous {
+    border: red solid 2px;
+}
+
+.safe {
+    border: green solid 2px;
+}
+
+.asteroid-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.asteroid-item:hover {
+    background-color: lightgray;
+}

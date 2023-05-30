@@ -1,0 +1,41 @@
+SELECT 
+    users.name,
+    users.email,
+    electronics_orders.total_spent
+FROM
+    users
+INNER JOIN (
+    SELECT 
+        orders.user_id, 
+        SUM(orders.quantity * products.price) AS total_spent,
+        COUNT(orders.id) as order_count
+    FROM 
+        orders
+    INNER JOIN
+        products
+    ON 
+        orders.product_id = products.id
+    WHERE 
+        products.category = 'Electronics'
+    GROUP BY 
+        orders.user_id
+    HAVING
+        COUNT(orders.id) >= 3 AND SUM(orders.quantity * products.price) > 1000
+) electronics_orders
+ON
+    users.id = electronics_orders.user_id
+ORDER BY 
+    electronics_orders.total_spent DESC;
+
+
+
+----
+
+This query retrieves users who have made at least 3 orders in the "Electronics" category and have spent more than $1000 on those orders. 
+It is broken into two main queries: the outer query and the inner subquery.
+
+Subquery:
+The subquery calculates the total amount spent and the count of orders for each user in the "Electronics" category.
+
+Outer Query:
+The outer query retrieves the user's information and the total amount they spent on the "Electronics" category.

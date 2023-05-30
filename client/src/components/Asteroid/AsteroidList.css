@@ -1,0 +1,51 @@
+/* AsteroidList.css */
+
+.asteroid-list {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.asteroid-list__header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.asteroid-list__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.asteroid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.asteroid-item:hover {
+    background-color: #f9f9f9;
+}
+
+.asteroid-item__name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.asteroid-item__magnitude {
+    color: #777;
+}
+
+.asteroid-item__diameter {
+    color: #777;
+}
+
+.asteroid-list__empty {
+    color: #777;
+    font-style: italic;
+}

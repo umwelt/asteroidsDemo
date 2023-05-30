@@ -1,0 +1,33 @@
+.asteroid-detail {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f6f6f6;
+}
+
+.asteroid-detail__header {
+    margin-bottom: 10px;
+}
+
+.asteroid-detail__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.asteroid-detail__name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.asteroid-detail__dangerous {
+    font-weight: bold;
+}
+
+.asteroid-detail__dangerous.dangerous {
+    color: red;
+}
+
+.asteroid-detail__dangerous.safe {
+    color: green;
+}

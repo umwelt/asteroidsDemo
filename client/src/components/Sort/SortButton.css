@@ -1,0 +1,9 @@
+.big-outlined-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+}
