@@ -1,4 +1,3 @@
-const { Request, Response } = require('express');
 const { getAsteroidsFromAPI, getAsteroidByIdFromAPI } = require('../services/apiService');
 
 async function getAsteroids(req, res) {

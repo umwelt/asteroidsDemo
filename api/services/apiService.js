@@ -25,16 +25,7 @@ async function getAsteroidByIdFromAPI(id) {
     }
 }
 
-async function addAsteroidToFavourites(id) {
-    try {
-        return await getAsteroidByIdFromAPI(id);
-    } catch (error) {
-        throw new Error(error);
-    }
-}
-
 module.exports = {
     getAsteroidsFromAPI,
     getAsteroidByIdFromAPI,
-    addAsteroidToFavourites
 };
