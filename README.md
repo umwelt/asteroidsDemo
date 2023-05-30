@@ -4,7 +4,7 @@ This project consists of a backend built with Express.js and a frontend built wi
 
 ## Demo
 
-The project contains a video with a demo of the project
+The project contains a video with a demo of the project DemoAsteroids.mp4
 
 ## Getting Started
 
